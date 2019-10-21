@@ -25,7 +25,6 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-			
 				<section>
 					<h1>DNS</h1>
 					Cuesta, Sebastián<br/>
@@ -80,15 +79,49 @@
 
 
 				<section>
-					<h1>DNS</h1>
-					DNSSEC
+					<section>
+						<h1>DNS</h1>
+						DNSSEC
+					</section>
+		
+					<section>
+						La Internet Engineering Task Force (IETF), la organización responsable de los estándares del protocolo DNS, 
+						se dieron cuenta que desde hace mucho tiempo, es un problema la falta de una autenticación más fuerte en DNS. El trabajo en busca una solución 
+						comenzó en la década de 1990 y el resultado fue el DNSSEC seguridad Extensiones (DNSSEC).
+					</section>
+					
+					<section>
+						DNSSEC fortalece la autenticación en DNS utilizando firmas digitales basadas en criptografía de clave pública.<br> 
+						Con DNSSEC, no son las consultas y respuestas DNS en sí mismas las que están firmadas criptográficamente, 
+						sino que los datos DNS en sí están firmados por el propietario de los datos.
+					</section>
+					
+					<section>
+						Al utilizar DNSSEC las partes implicadas son: dominio, servidor DNS y Registry.
+						El funcionamiento, al acceder a un sitio con DNSSEC habilitado sería el siguiente:
+						<p>- El navegador del visitante comprueba los servidores DNS asociados al dominio.</p>
+						<p>- Si las firmas digitales públicas que recibe coinciden con las publicadas en el Registry, el navegador dará por válida la solicitud y resolverá el sitio web, mostrando su contenido.</p>
+						<p>- Si por alguna razón las firmas no coinciden, el sitio web no sería accesible.</p>
+					</section>
+					
+					<section>
+						<img src="https://www.icann.org/sites/default/files/unmanaged/images/dnssec-home-graphic-680x284-13feb12.png" width="200%"></img>
+					</section>
+					
+					<section>
+						DNSSEC agrega dos características importantes al protocolo DNS :
+						<p>- La autenticación del origen de los datos permite que un solucionador verifique criptográficamente que los datos recibidos realmente provienen de donde se originaron los datos.</p>
+						<p>- La protección de la integridad de los datos le permite al solucionador saber que los datos no se han modificado en el tránsito, 
+						ya que el propietario de la zona lo firmó originalmente con la clave privada.</p>
+					</section>
+			
 				</section>
+				
+				
 				<section>
 					<h1>DNS</h1>
 					(DoH) DNS over HTTP
 				</section>
-			
-			
 			</div>
 		</div>
 
