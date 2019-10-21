@@ -48,6 +48,64 @@
 						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> and <a href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
 					</p>
 				</section>
+				
+				<section>
+					<section>
+						<h2>HTTP2</h2>
+					</section>
+					<section>
+						<h2>INTRODUCCIÓN</h2>
+						<p>HTTP/2 (Protocolo de Transferencia de Hipertexto, versión 2) es un protocolo de red utilizado por la World Wide Web que llega con el objetivo de actualizar el protocolo HTTP/1.1, con el que es compatible.
+						HTTP 2.0 no modifica la semántica de aplicación de Http. Todos los conceptos básicos, tales como los métodos HTTP,
+						códigos de estado, URI, y campos de cabecera, se mantienen sin cambios; sin embargo, HTTP 2.0 introduce innumerables 
+						mejoras como el uso de una única conexión, la compresión de cabeceras o el servicio ‘server push’.</p>
+					</section>
+					<section>
+						<h2>MISMA SEMÁNTICA</h2>
+						<p>El nuevo protocolo admite la misma semántica que HTTP / 1.1
+						Esto permitirá que la mayoría de los beneficios de HTTP / 2 sean utilizados por las aplicaciones de 
+						manera transparente simplemente actualizando la infraestructura del cliente y el servidor, pero sin ningún 
+						cambio en el código de la aplicación.</p>
+						<br>
+					</section>
+					
+					<section>
+						<h2>MULTIPLEXADO</h2>
+						<p>HTTP / 2 es un protocolo multiplexado que permite que múltiples flujos de solicitud compartan 
+						la misma conexión TCP / IP.</br>
+						Mejoras del Multiplexado:</br>
+							-Intercalar múltiples solicitudes en paralelo sin bloquear ninguna.</br>
+
+							-Intercalar múltiples respuestas en paralelo sin bloquear a nadie.</br>
+
+							-Use una sola conexión para entregar múltiples solicitudes y respuestas en paralelo.</br></p>
+						<br>
+					</section>
+					
+					
+					<section>
+						<p>-Ofrece tiempos de carga de página más bajos al eliminar la latencia innecesaria y mejorar la utilización de la capacidad de red disponible.</p>
+						<br>
+					</section>
+					
+					<section>
+						<h2>COMPRESION</h2>
+						<p>Los encabezados HTTP son muy detallados y altamente redundantes. HTTP / 2 proporciona un algoritmo de compresión 
+						efectivo (HPACK) que se adapta a HTTP y evita muchos de los problemas de seguridad sobre conexiones TLS(Cliente servidor/Servidor-Servidor). El tamaño reducido del encabezado permite que se envíen muchas solicitudes a través de una conexión TCP / IP recién abierta sin la necesidad de esperar a que su ventana de control de congestión aumente a la capacidad del enlace. Esto reduce significativamente la cantidad de viajes de ida</p>
+						<br>
+					</section>
+					
+					<section>
+						<p> y vuelta a la red necesarios para representar una página.</p>
+					</section>
+					
+					
+					<section>
+						<h2>SERVER PUSH</h2>
+						<p>Consiste en que el servidor será capaz de enviar información al cliente antes de que éste la solicite, es decir, el servidor intentará prever los recursos que el cliente va a necesitar y enviárselos antes a una caché especial para este propósito.El propósito de esto es mejorar las latencias y la cantidad de solucitudes que se envian.</p>
+						<br>
+					</section>
+				</section>
 
 				<section>
 					<h2>Hello There</h2>
