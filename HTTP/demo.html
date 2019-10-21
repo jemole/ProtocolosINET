@@ -91,7 +91,7 @@
 					<section>
 						<h2>COMPRESION</h2>
 						<p>Los encabezados HTTP son muy detallados y altamente redundantes. HTTP / 2 proporciona un algoritmo de compresión 
-						efectivo (HPACK) que se adapta a HTTP y evita muchos de los problemas de seguridad sobre conexiones TLS(Cliente servidor/Servidor-Servidor). El tamaño reducido del encabezado permite que se envíen muchas solicitudes a través de una conexión TCP / IP recién abierta sin la necesidad de esperar a que su ventana de control de congestión aumente a la capacidad del enlace. Esto reduce significativamente la cantidad de viajes de ida</p>
+						efectivo (HPACK) que se adapta a HTTP y evita muchos de los problemas de seguridad sobre conexiones TLS(Cliente servidor/Servidor-Servidor). El tamaño reducido del encabezado permite que se envíen muchas solicitudes a través de una conexión TCP / IP</p>
 						<br>
 					</section>
 					
@@ -106,6 +106,49 @@
 						<br>
 					</section>
 				</section>
+				<section>
+					<section>
+						<h2>HTTP 3 QUIC</h2>
+						<p>¿Qué es HTTP 3 QUIC?</p>
+						<p>Es un protocolo de red experimental sobre la capa de transporte diseñado por Jim Roskind en Google, inicialmente implantado en 2012. 
+							Este protocolo proporciona un entorno para la iteración rápida de algoritmos de prevención de congestión, estableciendo control en 
+							el espacio de aplicación en ambos extremos, en lugar de hacerlo en el espacio kernel. </p>
+						<br>
+						
+					</section>
+					<section>
+						
+						<h3>¿Cual es su objetivo?</h3>
+						<p>Su objetivo es desarrollar un protocolo que cumpla:</p> 
+						<ul>
+							<li>Un uso extendido del mismo en todo el mundo. </li>
+							<li>Reducir la pérdida de paquetes por bloqueo head-of-line. </li>
+							<li>Baja latencia.</li>
+							<li>Mejorar el soporte para móviles, en términos de latencia y eficiencia.</li>
+						</ul>
+						
+					</section>
+					<section>
+						
+						<h3>Ventajas</h3>
+						<p>QUIC resuelve el problema que tiene TCP utilizando un identificador único e independiente para cada 
+						extremo de la conexión. Este ID de conexión tiene un tamaño de entre cuatro y dieciocho bytes, que es creado 
+						de manera específica para la implementación de cada endpoint, lo que asegura que el endpoint pueda identificar 
+						su propio ID en un paquete QUIC, ya que el ID de conexión de destino está presente en cada paquete.</p>
+						
+					</section>
+					<section>
+						<h3>Ventajas</h3>
+						<p>Multiplexado: Permite enviar y recibir varios archivos al mismo tiempo, en este caso de manera más 
+						eficiente que HTTP/2 al no tener el problema de bloqueo de la cabecera de la línea.</p>
+						
+						<p>Mejor control de la saturación: QUIC consiste en un control de saturación conectable y una señalización más 
+						rica que TCP, lo que permite a QUIC proporcionar información más rica que TCP a los algoritmos de control de saturación. </p>
+					</section>	
+					
+				</section>
+				<section>
+				
 
 				<section>
 					<h2>Hello There</h2>
