@@ -50,17 +50,55 @@
 						<p>Un sistema de nomenclatura jerárquica para computadoras, servicios o cualquier recurso conectado a Internet o a una red privada. Este sistema asocia información variada con nombres de dominios asignado a cada uno de los participantes. Su función más importante, es traducir (resolver) nombres inteligibles para las personas en identificadores binarios asociados con los equipos conectados a la red, esto con el propósito de poder localizar y direccionar estos equipos mundialmente.</p>
 					</section>
 				</section>
+
+						
 				<section>
-					<h1>DNS</h1>
-					Esquema básico de funcionamiento de DNS
+				
+					<section>
+							<h1>DNS</h1>
+							<h4>Esquema básico de funcionamiento de DNS
+								<img src="res/diagramaCompleto.jpg" alt="img" width="800" height="400">
+							</h4>
+					</section>
+					<section>	
+							<p>El servicio de nombres de dominios se basa en un sistema de búsquedas recursivas a través de una jerarquía de servidores.</p>
+					</section>
+					<section>
+							<p>La búsqueda comienza por nuestro equipo, quien no conoce la IP del domínio al que se va a conectar, por lo que lanza una pregunta al servidor que tenga configurado.(1)</p>
+								<img src="res/d1.jpg" alt="img" width="400" height="150">
+					</section>
+					<section>
+							<p>Este servidor es el que, en caso de no conocer la IP buscada, comienza la búsqueda recursiva que acaba llegando a un Root Server.(2)</p>
+							<img src="res/d2.jpg" alt="img" width="600" height="200">
+					</section>
+
+					<section>
+							<p>El Root Server devuelve la dirección del LTD Server en el que se encuentra el dominio buscado.(3)</p>
+							<img src="res/d3.jpg" alt="img" width="600" height="200">
+					</section>
+
+					<section>
+							<p>El Servidor local vuelve a preguntar al LTD Server que le ha pasado el Root Server, y este le devuelve el servidor autorativo en el que se encuentra el dominio. (4,5)</p>
+							<img src="res/d4.jpg" alt="img" width="800" height="400">
+					</section>
+					<section>
+							<p>Por último el servidor local pregunta a la dirección que le ha pasado el servidor autoritativo y esta le devuelve la dirección IP que buscaba.(7,8)</p>
+							<img src="res/d5.jpg" alt="img" width="800" height="400">
+					</section>
+
+
+																	
 				</section>
+
+
+
 				<section>
 					<h1>DNS</h1>
 					DNSSEC
 				</section>
 				<section>
-				<h1>DNS</h1>
-				(DoH) DNS over HTTP
+					<h1>DNS</h1>
+					(DoH) DNS over HTTP
 				</section>
 			</div>
 		</div>
