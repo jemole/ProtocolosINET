@@ -34,21 +34,106 @@
 					Ruiz, Victor<br/>
 				</section>
 				<section>
-					<h1>DNS</h1>
-					Historia DNS
+					<section>
+						<h2>DNS</h2>
+						<p>La historia del sistema de nombres de dominio, DNS, se remonta a la década de los setenta, donde cada uno de los ordenadores conectados a la red tenía asignada una dirección numérica (de la misma forma que nuestros teléfonos actuales tienen asignado un número telefónico). </p>
+					</section>
+					<section>
+						<ul>
+							<li>Nació de la necesidad de recordar fácilmente los nombres de todoslos servidores conectados a Internet. </li>
+							<li>En un inicio, un archivo llamado HOSTS que contenía todos los nombres de dominio conocidos.</li>
+							<li>El sistema de nombres centralizado en el archivo hosts no resultaba práctico.</li>
+							<li>En 1983, Paul Mockapetris publicó los RFCs 882 y 883.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>DNS, ¿Qué es?</h2>
+						<p>Un sistema de nomenclatura jerárquica para computadoras, servicios o cualquier recurso conectado a Internet o a una red privada. Este sistema asocia información variada con nombres de dominios asignado a cada uno de los participantes. Su función más importante, es traducir (resolver) nombres inteligibles para las personas en identificadores binarios asociados con los equipos conectados a la red, esto con el propósito de poder localizar y direccionar estos equipos mundialmente.</p>
+					</section>
 				</section>
+
+						
 				<section>
-					<h1>DNS</h1>
-					Esquema básico de funcionamiento de DNS
+				
+					<section>
+							<h1>DNS</h1>
+							<h4>Esquema básico de funcionamiento de DNS
+								<img src="res/diagramaCompleto.jpg" alt="img" width="800" height="400">
+							</h4>
+					</section>
+					<section>	
+							<p>El servicio de nombres de dominios se basa en un sistema de búsquedas recursivas a través de una jerarquía de servidores.</p>
+					</section>
+					<section>
+							<p>La búsqueda comienza por nuestro equipo, quien no conoce la IP del domínio al que se va a conectar, por lo que lanza una pregunta al servidor que tenga configurado.(1)</p>
+								<img src="res/d1.jpg" alt="img" width="400" height="150">
+					</section>
+					<section>
+							<p>Este servidor es el que, en caso de no conocer la IP buscada, comienza la búsqueda recursiva que acaba llegando a un Root Server.(2)</p>
+							<img src="res/d2.jpg" alt="img" width="600" height="200">
+					</section>
+
+					<section>
+							<p>El Root Server devuelve la dirección del LTD Server en el que se encuentra el dominio buscado.(3)</p>
+							<img src="res/d3.jpg" alt="img" width="600" height="200">
+					</section>
+
+					<section>
+							<p>El Servidor local vuelve a preguntar al LTD Server que le ha pasado el Root Server, y este le devuelve el servidor autorativo en el que se encuentra el dominio. (4,5)</p>
+							<img src="res/d4.jpg" alt="img" width="800" height="400">
+					</section>
+					<section>
+							<p>Por último el servidor local pregunta a la dirección que le ha pasado el servidor autoritativo y esta le devuelve la dirección IP que buscaba.(7,8)</p>
+							<img src="res/d5.jpg" alt="img" width="800" height="400">
+					</section>
+
+
+																	
 				</section>
+
+
+
 				<section>
-					<h1>DNS</h1>
-					DNSSEC
-				</section>
-				<section>
+					<section>
+						<h1>DNS</h1>
+						DNSSEC
+					</section>
+		
+					<section>
+						La Internet Engineering Task Force (IETF), la organización responsable de los estándares del protocolo DNS, 
+						se dieron cuenta que desde hace mucho tiempo, es un problema la falta de una autenticación más fuerte en DNS. El trabajo en busca una solución 
+						comenzó en la década de 1990 y el resultado fue el DNSSEC seguridad Extensiones (DNSSEC).
+					</section>
+					
+					<section>
+						DNSSEC fortalece la autenticación en DNS utilizando firmas digitales basadas en criptografía de clave pública.<br> 
+						Con DNSSEC, no son las consultas y respuestas DNS en sí mismas las que están firmadas criptográficamente, 
+						sino que los datos DNS en sí están firmados por el propietario de los datos.
+					</section>
+					
+					<section>
+						Al utilizar DNSSEC las partes implicadas son: dominio, servidor DNS y Registry.
+						El funcionamiento, al acceder a un sitio con DNSSEC habilitado sería el siguiente:
+						<p>- El navegador del visitante comprueba los servidores DNS asociados al dominio.</p>
+						<p>- Si las firmas digitales públicas que recibe coinciden con las publicadas en el Registry, el navegador dará por válida la solicitud y resolverá el sitio web, mostrando su contenido.</p>
+						<p>- Si por alguna razón las firmas no coinciden, el sitio web no sería accesible.</p>
+					</section>
+					
+					<section>
+						<img src="https://www.icann.org/sites/default/files/unmanaged/images/dnssec-home-graphic-680x284-13feb12.png" width="200%"></img>
+					</section>
+					
+					<section>
+						DNSSEC agrega dos características importantes al protocolo DNS :
+						<p>- La autenticación del origen de los datos permite que un solucionador verifique criptográficamente que los datos recibidos realmente provienen de donde se originaron los datos.</p>
+						<p>- La protección de la integridad de los datos le permite al solucionador saber que los datos no se han modificado en el tránsito, 
+						ya que el propietario de la zona lo firmó originalmente con la clave privada.</p>
+					</section>
 			
-
-
+				</section>
+				
+				
+				<section>
 
 					<section>
 
@@ -104,7 +189,8 @@ Futuras soluciones posibles en la seguridad de protocolos:  <a href="https://dio
 					</section>
 					
 				</section>
-	
+
+
 			</div>
 		</div>
 
